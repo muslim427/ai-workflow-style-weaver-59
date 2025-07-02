@@ -1,13 +1,23 @@
+
 import React from 'react';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from '@/components/ui/button';
 import { Workflow, Github, Menu } from 'lucide-react';
 
+const downloadLogo = () => {
+  const link = document.createElement('a');
+  link.href = '/src/assets/logo-light.svg';
+  link.download = 'workflows-ai-logo.svg';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-slate-200/50 dark:border-slate-800/50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 cursor-pointer" onClick={downloadLogo}>
           <div className="p-2 rounded-lg bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-900 shadow-sm">
             <Workflow className="h-6 w-6 text-slate-700 dark:text-slate-300" />
           </div>

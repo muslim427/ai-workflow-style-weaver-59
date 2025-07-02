@@ -1,5 +1,15 @@
+
 import React from 'react';
 import { Workflow, Github, Twitter, Mail } from 'lucide-react';
+
+const downloadLogo = () => {
+  const link = document.createElement('a');
+  link.href = '/src/assets/logo-light.svg';
+  link.download = 'workflows-ai-logo.svg';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 export function Footer() {
   return (
@@ -7,7 +17,7 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center space-x-2 mb-4 cursor-pointer" onClick={downloadLogo}>
               <div className="p-2 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5">
                 <Workflow className="h-6 w-6 text-primary" />
               </div>
