@@ -1,0 +1,25 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Background -->
+  <rect width="200" height="60" fill="transparent"/>
+  
+  <!-- Logo Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Workflow nodes -->
+    <circle cx="10" cy="20" r="6" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <circle cx="30" cy="10" r="6" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <circle cx="30" cy="30" r="6" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    
+    <!-- Connecting lines -->
+    <line x1="16" y1="20" x2="24" y2="12" stroke="#334155" stroke-width="2"/>
+    <line x1="16" y1="20" x2="24" y2="28" stroke="#334155" stroke-width="2"/>
+    
+    <!-- AI spark -->
+    <path d="M35 20 L38 17 L41 20 L38 23 Z" fill="#2563eb"/>
+    <circle cx="38" cy="20" r="2" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="60" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Workflows</text>
+  <text x="60" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#2563eb">AI</text>
+</svg>
